@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<html>
+<head>
+</head>
+<body>
+    <section>
+        <div class="form-container">
+            <h1>Admin Login</h1>
+            <form id="f1" method="post">
+                <div class="control">
+                    <label for="name">Name</label>
+                    <font color="black"><input type="text" name="username"></font>
+</div>
+
+                <div class="control">
+                    <label for="pass">Password</label>
+                   <font color="black"> <input type="password" name="password"></font>
+                    </body>
+
+</html>
+                </div>
+                <span>
+                    <input type="checkbox">Remember Me
+                </span>
+                <div class="control">
+                    <input type="submit" value="Login">
+
+                </div>
+            </form>
+            <div class="link">
+                <a href="#">Back</a>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>
+<style>
+    # {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        front-family: "Open sans";
+        color: #fff;
+    }
+
+    section {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        background: url("/Images/tar.jpg");
+        background-size: cover;
+    }
+
+    .form-container {
+        position: absolute;
+        border-radius:25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: linear-gradient(rgba(0,0,0,0,3),(rgba(0,0,0,0,3)));
+        width: 300px;
+        padding: 50px 30px;
+        box-shadow: 7px 7px 60px #000;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 2em;
+        color: #e75480;
+    }
+
+
+    .control input {
+        width: 100%;
+        display: block;
+        padding: none;
+        outline: none;
+        margin: 1em 0;
+    }
+
+        .control input[type="submit"] {
+            background: crimson;
+            color: #FFC0CB;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            opacity: .77;
+            transition: opacity .3s ease;
+        }
+
+            .control input[type="submit"]:hover {
+                opacity: 1;
+            }
+
+    .link {
+        text-align: center;
+    }
+
+        .link a {
+            text-decoration: none;
+            color: #fff;
+            opacity: .6;
+            transition: opacity .3s ease;
+        }
+
+            .link a:hover {
+                opacity: 1;
+            }
+</style>
+

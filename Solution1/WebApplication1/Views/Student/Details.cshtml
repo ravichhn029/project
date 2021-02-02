@@ -1,0 +1,171 @@
+﻿@using BOL;
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,intital scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</head>
+<style>
+    .table {
+        border-spacing: 10px;
+        border: 1px solid #666;
+        padding: 5px;
+        height: 200px;
+        width: 150px;
+        font-size: 20px;
+        margin: 6%;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: blue;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
+
+    .btn1 {
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: blue;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
+</style>
+
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+
+
+            <div class="card-body">
+
+                <p class="card-text"></p>
+
+                <center><h2><b>Student Details<b></b></h2></center>
+                <table class="table table-dark table-hover table-bordered" style="width:900px" height="70px" cellpadding="70" cellspacing="50">
+                    
+                    <tbody>
+
+
+                        @{
+                            StudentResult s = Model as StudentResult;
+                            var sum = s.English + s.Java + s.Angular + s.DotNet + s.Html;
+
+
+
+
+
+                            <tr class="table-primary">><td>RollNo</td> <td>@s.RollNo</td></tr>
+
+                            <tr class="table-primary">>
+                                <td>Name</td>
+                                <td>@s.Name</td>
+                            </tr>
+
+                            <tr class="table-primary">>
+                                <td>Father Name</td>
+                                <td>@s.FatherName</td>
+                            </tr>
+
+
+                            <tr class="table-primary">>
+                                <td>Branch</td>
+                                <td>@s.Branch</td>
+                            </tr>
+
+                            <tr class="table-primary">>
+                                <td>Dob</td>
+                                <td>@s.Dob</td>
+                            </tr>
+
+                            <tr class="table-primary">
+                                <td>Gender</td>
+                                <td>@s.Gender</td></tr>
+
+
+
+                            <tr class="table-secondary"><td>English</td> <td>@s.English</td></tr>
+                            <tr class="table-secondary">
+                                <td>java</td>
+                                <td>@s.Java</td>
+                            </tr>
+
+
+                            <tr class="table-secondary">
+                                <td>Angular</td>
+                                <td>@s.Angular</td>
+                            </tr>
+
+
+                            <tr class="table-secondary">
+                                <td>Dot net</td>
+                                <td>@s.DotNet</td>
+                            </tr>
+
+
+                            <tr class="table-secondary">
+                                <td>Html</td>
+                                <td>@s.Html</td>
+                            </tr>
+
+
+                            <tr class="table-danger">
+                                <td>Total Percentage</td>
+                                <td>@((sum * 100) / 500)%</td>
+
+
+
+                            </tr>
+
+
+                            }
+
+
+
+
+
+
+                        </tbody>
+                    </table>
+
+                
+
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+</html>
+
+
+

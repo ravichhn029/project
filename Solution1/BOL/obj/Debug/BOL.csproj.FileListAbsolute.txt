@@ -1,0 +1,5 @@
+D:\dotNet\myPractice\New folder\Solution1\BOL\bin\Debug\BOL.dll
+D:\dotNet\myPractice\New folder\Solution1\BOL\bin\Debug\BOL.pdb
+D:\dotNet\myPractice\New folder\Solution1\BOL\obj\Debug\BOL.dll
+D:\dotNet\myPractice\New folder\Solution1\BOL\obj\Debug\BOL.pdb
+D:\dotNet\myPractice\New folder\Solution1\BOL\obj\Debug\BOL.csprojAssemblyReference.cache

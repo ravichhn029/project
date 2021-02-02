@@ -1,0 +1,131 @@
+﻿@using BOL;
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,intital scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</head>
+<style>
+    .table {
+        border-spacing: 10px;
+        border: 1px solid #666;
+        padding: 5px;
+        height: 200px;
+        width: 150px;
+        font-size: 20px;
+        color:black;
+        margin: 6%;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        border: none;
+        padding: 10px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    textarea:focus, input:focus {
+    color: black;
+}
+
+input, select, textarea{
+    color: black;
+}
+</style>
+
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+
+
+            <div class="card-body">
+
+                <p class="card-text"></p>
+
+                <form method="post">
+                <table class="table table-dark table-hover table-bordered" style="width:900px" height="70px" cellpadding="70" cellspacing="50">
+                    <thead>
+                        <tr>
+                            <th scope="col">RollNo</th>
+                            <th scope="col">Name</th>
+
+                            <th scope="col">Father Name</th>
+                            <th scope="col">Date of birth</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Branch</th>
+                            <th scope="col">Links</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        @{
+                            Student details = Model as Student;
+
+
+                            <form method="post" action="/Document/Update/@details.RollNo">
+                                <tr>
+
+                                    <td><input type="number" name="rollno" readonly value="@details.RollNo" /></td>
+                                    <td><input type="text" name="name" value="@details.Name" /></td>
+                                    <td><input type="text" name="father" value="@details.FatherName" /></td>
+                                    <td><input type="date" name="dob" value="@details.Dob" /></td>
+                                    <td><input type="text" name="gender" value="@details.Gender" /></td>
+                                    <td><input type="text" name="branch" value="@details.Branch" /></td>
+
+
+
+                                    <td>
+                                        <div class="btn">
+                                            <input type="submit"  value="Save"class="btn btn-success badge-pill">Save&nbsp &nbsp
+                                            <a href="/Document/Delete/@details.RollNo" class="btn btn-danger badge-pill">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </form>
+
+                                }
+
+
+
+
+
+
+                        </tbody>
+                </table>
+                 </form>
+
+            </div>
+        </div>
+        
+
+    </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
